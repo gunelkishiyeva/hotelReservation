@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { faBed,  faCalendarDays, faCar, faPerson, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import { faBed,  faCalendarDays, faPerson} from '@fortawesome/free-solid-svg-icons'
 import { format } from "date-fns";
+import { useNavigate } from 'react-router-dom';
+import travel from './travel.png';
 
 const Header = ({type}) => {
   const [date, setDate] = useState([
@@ -17,49 +19,67 @@ const Header = ({type}) => {
   ]);
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions ]  = useState(false);
+  const [destination,setDestination] =useState("")
   const [options, setOptions] = useState({
     adult: 1,
     children: 0,
     room: 1,
   })
-
+const navigate = useNavigate ()
   const handleOption = (name, operation) => {
     setOptions(prev => {
       return {
         ...prev, [name]: operation === "i" ? options[name] + 1 : options[name] - 1
       }
     })
+    
+  }
+  const handleSearch = ()=>{
+navigate("/hotels", {state:{destination, date, options}})
   }
   return (
     <div className='header'>
       <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
         <div className="headerList">
           <div className="headerListItem active">
-            <FontAwesomeIcon icon={faBed} />
-            <span>Stays</span>
+            {/* <FontAwesomeIcon icon={faBed} />
+            <span>Stays</span> */}
           </div>
-          <div className="headerListItem">
+          {/* <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
             <span>Flights</span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
             <span>Car rentals</span>
-          </div>
-          <div className="headerListItem">
+          </div> */}
+          {/* <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <span>Attractions</span>
-          </div>
-          <div className="headerListItem">
+          </div> */}
+          {/* <div className="headerListItem">
             <FontAwesomeIcon icon={faTaxi} />
             <span>Airport taxis</span>
-          </div>
+          </div> */}
         </div>
       {  type !== "list" &&
       <>
-       <h1 className='headerTitle'>The great getaway, your way </h1>
-        <p className="headerDesc">Save at least 15% on stays worldwide, from relaxing retreats to off-the-grid adventures</p>
-        <button className="headerBtn">Find Getaway Deals</button>
+      <div className="headerDescm">
+        <div className="headerDescText">
+        <h1 className='headerTitle'>Find your stays with us! </h1>
+        <p>Search and book with ease on our website.Choose from a variety of options.
+        Filter by price, location, and amenities.</p>
+        <h3 className="headerDesc">
+Book now and enjoy your stay!</h3>
+        <button className="headerBtn">
+          
+          Find Getaway Deals</button>
+        </div>
+        <div className="headerDescImg">
+        <img className="headerDescImgg" src={travel} alt="Logo" />
+        </div>
+      </div>
+       
 
         <div className="headerSearch">
           <div className="headerSearchItem">
@@ -67,7 +87,8 @@ const Header = ({type}) => {
             <input
               type="text"
               placeholder="Where are you going?"
-              className="headerSearchInput" />
+              className="headerSearchInput"
+              onChange={e=> setDestination(e.target.value)} />
           </div>
           <div className="headerSearchItem">
             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
@@ -114,7 +135,7 @@ const Header = ({type}) => {
 
           </div>
           <div className="headerSearchItem">
-            <button className='headerBtn'> Search</button>
+            <button className='headerBtn' onClick={handleSearch}> Search</button>
           </div>
         </div> </>}
       </div>

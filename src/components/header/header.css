@@ -1,15 +1,35 @@
 .header {
-  background-color: #003580;
-  color: white;
+  background-color: #deeefc;
+  color:  #003153;
   display: flex;
   justify-content: center;
   position: relative;
-}
+  font-weight: 600;
 
+ 
+}
+.headerDescm{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  
+}
+.headerDescImg{
+  width: 50%;
+  
+}
+.headerDescText{
+  width: 50%;
+}
+.headerDescImgg{
+  width: 350px;
+  height: 350px;
+  max-width: 350px;
+}
 .headerContainer {
   width: 100%;
   max-width: 1024px;
-  margin: 20px 0px 100px 0px;
+  margin: 0px 0px 100px 0px;
 }
 
 .headerContainer.listMode {
@@ -19,17 +39,18 @@
 .headerList {
   display: flex;
   gap: 40px;
-  margin-bottom: 50px;
+ height: 0;
 }
 
 .headerListItem {
   display: flex;
   align-items: center;
   gap: 10px;
+  color:  #333333;
 }
 
 .headerListItem.active {
-  border: 1px solid white;
+  border: 0px solid white;
   padding: 10px;
   border-radius: 20px;
 }
@@ -39,18 +60,19 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
-  color: white;
+  background-color: #000133;
+  color:  #EDEDED;
   font-weight: 500;
-  border: none;
+
   padding: 10px;
   cursor: pointer;
 }
 
 .headerSearch {
-  height: 30px;
+  height: 40px;
   background-color: white;
-  border: 3px solid #febb02;
+  
+  border: 3px solid darkblue;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -59,11 +81,12 @@
   position: absolute;
   bottom: -25px;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1020px;
+  min-width: 300px;
 }
 
 .headerIcon {
-  color: lightgray;
+  color: gray;
 }
 
 .headerSearchItem {
@@ -74,11 +97,11 @@
 
 .headerSearchInput {
   border: none;
-  outline: none;
+  outline: none;  
 }
 
 .headerSearchText {
-  color: lightgray;
+  color: rgb(38, 38, 38);
   cursor: pointer;
   font-size: 13px;
 }
@@ -127,4 +150,18 @@ background-color: white;
 
 .optionCounterButton:disabled {
   cursor: not-allowed;
+}
+@media (min-width: 300px) and (max-width: 768px) {
+  
+  
+.headerSearch {
+width: 100%;
+}
+}
+@media only screen and (min-width: 768px) {
+  .mail{
+    width: 80%;
+
+    
+  }
 }

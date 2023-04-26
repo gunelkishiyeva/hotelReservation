@@ -98,6 +98,7 @@ Book now and enjoy your stay!</h3>
               onChange={item => setDate([item.selection])}
               moveRangeOnFirstSelection={false}
               ranges={date}
+              minDate={new Date()}
               className='date'
             />}
           </div>

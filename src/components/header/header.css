@@ -1,13 +1,14 @@
 .header {
-  background-color: #deeefc;
-  color:  #003153;
+  background-color: #fc94c6;
+  color:  white;
   display: flex;
   justify-content: center;
   position: relative;
   font-weight: 600;
 
- 
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+
 .headerDescm{
   display: flex;
   align-items: center;
@@ -15,15 +16,15 @@
   
 }
 .headerDescImg{
-  width: 50%;
-  
+  width: 40%;
 }
+
 .headerDescText{
-  width: 50%;
+  width: 60%;
 }
 .headerDescImgg{
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 300px;
   max-width: 350px;
 }
 .headerContainer {
@@ -33,7 +34,7 @@
 }
 
 .headerContainer.listMode {
-  margin: 20px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
 }
 
 .headerList {
@@ -51,8 +52,10 @@
 
 .headerListItem.active {
   border: 0px solid white;
-  padding: 10px;
+  padding: 0px;
   border-radius: 20px;
+  height: 0;
+  
 }
 
 .headerDesc {
@@ -60,19 +63,19 @@
 }
 
 .headerBtn {
-  background-color: #000133;
-  color:  #EDEDED;
-  font-weight: 500;
-
-  padding: 10px;
+  background-color: #a11458;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
   cursor: pointer;
+ 
 }
 
 .headerSearch {
   height: 40px;
   background-color: white;
-  
-  border: 3px solid darkblue;
+  border: 3px solid #f0d149;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -98,10 +101,11 @@
 .headerSearchInput {
   border: none;
   outline: none;  
+  
 }
 
 .headerSearchText {
-  color: rgb(38, 38, 38);
+  color: gray;
   cursor: pointer;
   font-size: 13px;
 }

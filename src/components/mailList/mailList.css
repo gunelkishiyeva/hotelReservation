@@ -2,7 +2,7 @@
   width: 100%;
   width: 1024px;
   margin-top: 50px;
-  background-color: #003153;
+  background-color: #fc94c6;
   color: white;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,10 @@
 
 .mailInputContainer>button{
   height: 50px;
-  background-color: #647C90;
+  background-color: #a11458;
   color: white;
   font-weight: 500;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -51,7 +50,7 @@
 }
 @media only screen and (min-width: 768px) {
   .mail{
-    width: 80%;
+    width: 92%;
 
     
   }

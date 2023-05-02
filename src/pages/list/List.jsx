@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from '../../components/header/Header'
 import Navbar from '../../components/navbar/Navbar'
 import './list.css';
@@ -41,14 +41,14 @@ const List = () => {
               <span onClick={() => setOpenDate(!openDate)}>
                 {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")} `}
               </span>
-              <input type='text' />
-              {openDate && (<DateRange
-                editableDateInputs={true}
+
+              {openDate && (
+              <DateRange
+               
                 onChange={(item) => setDates([item.selection])}
-                moveRangeOnFirst Selection={false}
                 ranges={dates}
-                className="date"
-                minDate={new Date()} />
+                minDate={new Date()} 
+                />
               )}
 
             </div>
@@ -56,20 +56,18 @@ const List = () => {
             <div className="lsItem">
               <label>Options</label>
               <div className="lsOptions">
-
-
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
                     Min price <small>per night</small>
                   </span>
-                  <input type="number" onChange={e=>setMin(e.target.value)} className="1sOptionInput" />
+                  <input type="number" onChange={(e)=>setMin(e.target.value)} className="1sOptionInput" />
                 </div>
 
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
                     Max price <small>per night</small>
                   </span>
-                  <input type="number" onChange={e=>setMax(e.target.value)} className="1sOptionInput" />
+                  <input type="number" onChange={(e)=>setMax(e.target.value)} className="1sOptionInput" />
                 </div>
                 <div className="lsOptionItem">
                   <span className="lsOptionText">
@@ -92,19 +90,17 @@ const List = () => {
               </div>
             </div>
 <button onClick={handleClick}>Search</button>
-
           </div>
-
-
-        
-
         <div className="listResult"> 
-        {loading ? "loading" :<>
+        {loading ? (
+        "loading"
+        ) : (
+        <>
         {data.map((item)=>(
  <SearchItem item={item} key={item._id}/>
         ))}
         
-         </> }
+         </> )}
        
         
         </div>

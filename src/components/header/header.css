@@ -1,11 +1,10 @@
 .header {
-  background-color: #fc94c6;
-  color:  white;
+  background-color: #f8bddb;
+  color:  #24233f;
   display: flex;
   justify-content: center;
   position: relative;
   font-weight: 600;
-
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -14,6 +13,7 @@
   align-items: center;
   width: 100%;
   
+  
 }
 .headerDescImg{
   width: 40%;
@@ -21,6 +21,7 @@
 
 .headerDescText{
   width: 60%;
+  padding: 10px;
 }
 .headerDescImgg{
   width: 100%;

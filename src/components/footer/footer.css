@@ -1,15 +1,12 @@
 .footer{
   width: 100%;
-  width: 1024px;
   font-size: 12px;
- 
 }
 
 .fLists{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
+  justify-content: space-around;
 }
 
 .fList{
@@ -22,14 +19,19 @@
   color: #003580;
   cursor: pointer;
 }
-
+.fText{
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding-bottom:10px;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 @media (min-width: 300px) and (max-width: 768px) {
   .fLists{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
     
     
   }

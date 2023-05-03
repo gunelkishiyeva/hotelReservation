@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 
 const PropertyList = () => {
   const { data, loading, error } = useFetch(
-    "hotels/countByType"
+    "/hotels/countByType"
   );
 
 

@@ -23,7 +23,7 @@ const Reserve = ({ setOpen, hotelId }) => {
             dates.push(new Date(date).getTime())
             date.setDate(date.getDate() + 1)
         }
-        return dates
+        return dates;
     };
     const alldates = getDatesInRange(dates[0].startDate, dates[0].endDate)
 
@@ -37,7 +37,10 @@ const Reserve = ({ setOpen, hotelId }) => {
     const handleSelect = (e) => {
         const checked = e.target.checked;
         const value = e.target.value
-        setSelectedRooms(checked ? [...selectedRooms, value] : selectedRooms.filter((item) => item !== value))
+        setSelectedRooms(
+            checked 
+            ? [...selectedRooms, value] 
+            : selectedRooms.filter((item) => item !== value))
     }
 
     const navigate = useNavigate()
@@ -67,12 +70,12 @@ const Reserve = ({ setOpen, hotelId }) => {
                 />
                 <span>Select your rooms:</span>
                 {data.map(item => {
-                    <div className="rItem">
+                    <div className="rItem" key={item._id}>
                         <div className="rItemInfo">
                             <div className="rTitle">{item.title}</div>
-                            <div className="rDesc">{item.description}</div>
-                            <div className="rMax">Max people <b>{item.maxPeople}</b></div>
-                            <div className="rPrice">{item.Price}</div>
+                            <div className="rDesc">{item.desc}</div>
+                            <div className="rMax">Max people: <b>{item.maxPeople}</b></div>
+                            <div className="rPrice">{item.price}</div>
                         </div>
                         {item.roomNumbers.map((roomNumber) => (
                             <div className="room">

@@ -1,5 +1,6 @@
-import  { useContext, useState } from 'react'
+import  { useContext, useEffect, useState } from 'react'
 import "./header.css"
+import AlanButton from "@alan-ai/alan-sdk-web"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
@@ -48,6 +49,8 @@ const Header = ({ type }) => {
     dispatch({ type: "NEW_SEARCH", payload: { destination, dates, options } });
     navigate("/hotels", { state: { destination, dates, options } })
   }
+  
+
   return (
     <div className='header'>
       <div
@@ -85,7 +88,7 @@ const Header = ({ type }) => {
                 <p>Get rewarded for your travels - unlock instant savings of 10% or more with a free Stayzilla account.      </p>
                 <h3 className="headerDesc">
                   Book now and enjoy your stay!</h3>
-                { !user && <button className="headerBtn">
+                { !user && <button className="headerBtn reg">
                   Sign in / Register</button>}
               </div>
               <div className="headerDescImg">

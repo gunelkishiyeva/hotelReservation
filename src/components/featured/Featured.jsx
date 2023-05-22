@@ -4,7 +4,7 @@ import "./featured.css";
 const Featured = () => {
 
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?cities=berlin,madrid,london");
+    "/hotels/countByCity?cities=baku,madrid,london");
  
   return (
     <div className="featured">
@@ -12,19 +12,19 @@ const Featured = () => {
         "Loading please wait") : (<>
       <div className="featuredItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o="
+          src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/11/cover-Things-To-Do-In-Baku.jpg"
           alt=""
           className="featuredImg"
         />
         <div className="featuredTitles">
-          <h1>Berlin</h1>
+          <h1>Baku</h1>
           <h2>{data[0]} properties</h2>
         </div>
       </div>
 
       <div className="featuredItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o="
+          src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1653015477/klxnme5j2lv6tn7tagfs.jpg"
           alt=""
           className="featuredImg"
         />
@@ -35,7 +35,7 @@ const Featured = () => {
       </div>
       <div className="featuredItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o="
+          src="https://www.londonmalanders.com/wp-content/uploads/2020/02/Parks-London.jpg"
           alt=""
           className="featuredImg"
         />

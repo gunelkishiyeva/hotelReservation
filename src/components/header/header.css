@@ -62,7 +62,9 @@
 .headerDesc {
   margin: 20px 0px;
 }
-
+.reg{
+  margin-top: 30px;
+}
 .headerBtn {
   background-color: #a11458;
   color: white;
@@ -70,7 +72,7 @@
   padding: 10px 15px;
   border: none;
   cursor: pointer;
- 
+
 }
 
 .headerSearch {

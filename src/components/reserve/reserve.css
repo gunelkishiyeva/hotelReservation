@@ -1,5 +1,5 @@
 .reserve {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.418);
     position: fixed;
@@ -68,7 +68,7 @@
   .rButton {
     border: none;
     padding: 10px 20px;
-    background-color: #0071c2;
+    background-color: #c20088;
     color: white;
     font-weight: bold;
     cursor: pointer;

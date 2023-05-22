@@ -1,6 +1,6 @@
-import { faCircleXmark } from "@fortawesome/free-solid-svg-icons"
-import "./reserve.css"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import "./reserve.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { useContext, useState } from "react";
@@ -69,7 +69,7 @@ const Reserve = ({ setOpen, hotelId }) => {
                     onClick={() => setOpen(false)}
                 />
                 <span>Select your rooms:</span>
-                {data.map(item => {
+                {data.map((item) => {
                     <div className="rItem" key={item._id}>
                         <div className="rItemInfo">
                             <div className="rTitle">{item.title}</div>

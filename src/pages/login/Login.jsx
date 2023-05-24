@@ -32,7 +32,10 @@ const Login = () => {
 
   return (
     <div className="login">
+      
       <div className="lContainer">
+      <h3>Sign Up</h3>
+      <p>Stay with outdates!</p>
         <input
           type="text"
           placeholder="username"

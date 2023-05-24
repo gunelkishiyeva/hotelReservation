@@ -36,11 +36,11 @@ const Reserve = ({ setOpen, hotelId }) => {
     }
     const handleSelect = (e) => {
         const checked = e.target.checked;
-        const value = e.target.value
+        const value = e.target.value;
         setSelectedRooms(
             checked 
             ? [...selectedRooms, value] 
-            : selectedRooms.filter((item) => item !== value))
+            : selectedRooms.filter((item) => item !== value));
     }
 
     const navigate = useNavigate();
